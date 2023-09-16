@@ -1,10 +1,11 @@
 import React from 'react'
-import Navbar from './Navbar.js'
 
 
 function Home() {
   return (
-    <Navbar/>
+    <>
+      <div className='relative w-full h-[90vh] bg-amber-200 '>Hola</div>
+    </>
   )
 }
 
