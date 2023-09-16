@@ -63,26 +63,26 @@ function SignUpuser( props ) {
             <Box>
               <FormControl id="firstName" isRequired>
                 <FormLabel>First Name</FormLabel>
-                <Input type="text" placeholder='First Name' value={signUpInfo.firstName} id='firstName' onChange={changeHandler}/>
+                <Input type="text" placeholder='First Name' value={signUpInfo.firstName} id='firstName' name='Name' onChange={changeHandler} required/>
               </FormControl>
             </Box>
             <Box>
               <FormControl id="lastName" isRequired>
                 <FormLabel>Last Name</FormLabel>
-                <Input type="text" placeholder='Last Name' value={signUpInfo.lastName} id='lastName' onChange={changeHandler}/>
+                <Input type="text" placeholder='Last Name' value={signUpInfo.lastName} id='lastName' name='last_name' onChange={changeHandler} required/>
               </FormControl>
             </Box>
           </HStack>
 
           <FormControl id="email" isRequired>
             <FormLabel>Email address</FormLabel>
-            <Input type="email" placeholder='Email' value={signUpInfo.email} id='email' onChange={changeHandler}/>
+            <Input type="email" placeholder='Email' value={signUpInfo.email} id='email' name='Email' onChange={changeHandler} required/>
           </FormControl>
 
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
-              <Input type={showPassword ? 'text' : 'password'} placeholder='Password' id='pass' value={signUpInfo.pass} onChange={changeHandler}/>
+              <Input type={showPassword ? 'text' : 'password'} placeholder='Password' id='pass' name='Password' value={signUpInfo.pass} onChange={changeHandler} required/>
               <InputRightElement h={'full'}>
                 <Button
                   variant={'ghost'}
@@ -95,7 +95,8 @@ function SignUpuser( props ) {
           </FormControl>
 
           <Stack spacing={10} pt={2}>
-            <Button
+            
+              <Button
               loadingText="Submitting"
               size="lg"
               bg={'blue.400'}
@@ -104,8 +105,9 @@ function SignUpuser( props ) {
                 bg: 'blue.500',
               }}
               onClick={submitHandler}>
-              Sign up
-            </Button>
+              <NavLink to='/createProfile'>Sign up</NavLink>
+              </Button>
+            
           </Stack>
           <Stack pt={6}>
             <Text align={'center'}>

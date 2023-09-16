@@ -12,7 +12,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { NavLink , Link } from 'react-router-dom'
 
 function Login( props ) {
   const [logInInfo , setLogInInfo] =useState({
@@ -50,11 +50,11 @@ function Login( props ) {
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" placeholder='Email' id='email' onChange={changeHandler}/>
+              <Input type="email" placeholder='Email' id='email' onChange={changeHandler} required/>
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" placeholder='Password' id='pass' onChange={changeHandler}/>
+              <Input type="password" placeholder='Password' id='pass' onChange={changeHandler} required/>
             </FormControl>
             <Stack spacing={10}>
               <Stack
@@ -64,15 +64,17 @@ function Login( props ) {
                 <Text>Dont have an account?</Text>
                 <Link to='/signup'><Text color={'blue.400'}>Sign Up</Text></Link>
               </Stack>
-              <Button
+              
+                <Button
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
                   bg: 'blue.500',
                 }}
                 onClick={submitHandler}>
-                Log in
-              </Button>
+                <NavLink to='/createProfile'>Log In</NavLink>
+                </Button>
+              
             </Stack>
           </Stack>
         </Box>
