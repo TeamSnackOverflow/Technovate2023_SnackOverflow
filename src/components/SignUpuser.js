@@ -105,7 +105,7 @@ function SignUpuser( props ) {
                 bg: 'blue.500',
               }}
               onClick={submitHandler}>
-              <NavLink to='/createProfile'>Sign up</NavLink>
+              <NavLink to='/update'>Sign up</NavLink>
               </Button>
             
           </Stack>

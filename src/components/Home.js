@@ -14,8 +14,8 @@ function Home( props ) {
             </Box>
             <Box w={'50%'} px={12}>
               <Stack spacing={6} align={'center'}>
-                <Heading className='fadeup' fontSize={'48px'} lineHeight={'65px'} bgGradient='linear(to-r,blue.500 , green.200)' bgClip='text'>Heading</Heading>
-                <Text fontSize={'lg'} className='fadeup'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                <Heading className='fadeup' fontSize={'48px'} lineHeight={'65px'} bgGradient='linear(to-r, green.200,blue.500 )' bgClip='text' textAlign={'center'}>Unlock a Smarter Way to Commute</Heading>
+                <Text fontSize={'lg'} className='fadeup' textAlign={"center"}>Are you tired of facing the daily grind of traffic jams, high gas prices, and the endless search for parking spots? CarpoolConnect is here to revolutionize your daily commute! Join our community of like-minded commuters and experience the benefits of carpooling like never before. Embrace a sustainable, stress-free, and cost-effective way to get where you need to go.</Text>
                 <Button
                   variant={'solid'}
                   bgColor={'blue.400'}

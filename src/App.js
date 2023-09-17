@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Update from './components/Update';
 import AOS from 'aos';
 import Result from './components/Result'
+import Fare from './components/Fare';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route exact path='/location' element={<CreateProfile/>}></Route>
         <Route exact path='/update' element={<Update/>}></Route>
         <Route exact path='/findothers' element={<Result/>}></Route>
+        <Route exact path='/pay' element={<Fare/>}></Route>
         <Route
           path="*"
           element={<Navigate to="/" replace />}

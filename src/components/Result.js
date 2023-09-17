@@ -1,5 +1,6 @@
 import { Box, Stack , Heading ,Text, Card, CardBody , useToast} from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Result() {
     const [isBooked , setIsBooked] = useState(false)
@@ -23,6 +24,7 @@ function Result() {
         <Heading ml={4} mb={8} bgGradient='linear(to-r,blue.500 , green.200)'bgClip='text'>Available Carpoolers :</Heading>
         <Stack className='fadeup' spacing='8'>
             {users1.map((riders) => (
+             <NavLink to='/pay'>
              <Card 
                 key={riders.id} 
                 variant={'elevated'} 
@@ -35,14 +37,15 @@ function Result() {
                 }}
                 >
 
-                <CardBody onClick={clickHandler}>
-                    <Heading size='md' mb={4}>{riders.name}</Heading>
-                    <Text>Gender : {riders.Gender}</Text>
-                    <Text>Source : {riders.start}</Text>
-                    <Text>Destination : {riders.destination}</Text>
-                    <Text >Car Type : {riders.Car_type}</Text>
-                </CardBody>
-            </Card>
+                    <CardBody onClick={clickHandler}>
+                        <Heading size='md' mb={4}>{riders.name}</Heading>
+                        <Text>Gender : {riders.Gender}</Text>
+                        <Text>Source : {riders.start}</Text>
+                        <Text>Destination : {riders.destination}</Text>
+                        <Text >Car Type : {riders.Car_type}</Text>
+                    </CardBody>
+                </Card>
+            </NavLink>
   ))}
 </Stack>
     </Box>

@@ -17,6 +17,7 @@ import {
     Stack,
     Progress,
     Tooltip,
+    Image,
   } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
@@ -38,7 +39,7 @@ function Navbar(props) {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={'center'}>
-          <Box>Logo</Box>
+          <Box><NavLink to='/'><Image src={require('../logo.png')} alt='logo'w={'150px'}/></NavLink></Box>
           <HStack as={'nav'} spacing={18} display={{ base: 'none', md: 'flex' }}>
             {Links.map((link) => (
               <NavLink key={link.title} to={link.path}>
