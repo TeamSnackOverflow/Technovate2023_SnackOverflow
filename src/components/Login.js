@@ -40,7 +40,7 @@ function Login( props ) {
       bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Log in to your account</Heading>
+          <Heading fontSize={'4xl'} bgGradient='linear(to-r, green.200, blue.500)'bgClip='text'>Log in to your account</Heading>
         </Stack>
         <Box
           rounded={'lg'}
@@ -72,7 +72,7 @@ function Login( props ) {
                   bg: 'blue.500',
                 }}
                 onClick={submitHandler}>
-                <NavLink to='/createProfile'>Log In</NavLink>
+                <NavLink to='/'>Log In</NavLink>
                 </Button>
               
             </Stack>

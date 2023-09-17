@@ -48,7 +48,7 @@ function SignUpuser( props ) {
     bg={useColorModeValue('gray.50', 'gray.800')}>
     <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
       <Stack align={'center'}>
-        <Heading fontSize={'4xl'} textAlign={'center'}>
+        <Heading fontSize={'4xl'} textAlign={'center'} bgGradient='linear(to-r, green.200, blue.500)'bgClip='text'>
           Sign up
         </Heading>
       </Stack>
@@ -63,26 +63,26 @@ function SignUpuser( props ) {
             <Box>
               <FormControl id="firstName" isRequired>
                 <FormLabel>First Name</FormLabel>
-                <Input type="text" placeholder='First Name' value={signUpInfo.firstName} id='firstName' name='Name' onChange={changeHandler} required/>
+                <Input type="text" placeholder='First Name' value={signUpInfo.firstName} id='firstName' name='Name' onChange={changeHandler} isRequired/>
               </FormControl>
             </Box>
             <Box>
               <FormControl id="lastName" isRequired>
                 <FormLabel>Last Name</FormLabel>
-                <Input type="text" placeholder='Last Name' value={signUpInfo.lastName} id='lastName' name='last_name' onChange={changeHandler} required/>
+                <Input type="text" placeholder='Last Name' value={signUpInfo.lastName} id='lastName' name='last_name' onChange={changeHandler} isRequired/>
               </FormControl>
             </Box>
           </HStack>
 
           <FormControl id="email" isRequired>
             <FormLabel>Email address</FormLabel>
-            <Input type="email" placeholder='Email' value={signUpInfo.email} id='email' name='Email' onChange={changeHandler} required/>
+            <Input type="email" placeholder='Email' value={signUpInfo.email} id='email' name='Email' onChange={changeHandler} isRequired/>
           </FormControl>
 
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
-              <Input type={showPassword ? 'text' : 'password'} placeholder='Password' id='pass' name='Password' value={signUpInfo.pass} onChange={changeHandler} required/>
+              <Input type={showPassword ? 'text' : 'password'} placeholder='Password' id='pass' name='Password' value={signUpInfo.pass} onChange={changeHandler} isRequired/>
               <InputRightElement h={'full'}>
                 <Button
                   variant={'ghost'}
